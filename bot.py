@@ -81,12 +81,12 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     elif stage == 3:
         user_data[user_id]["deadline"] = text
         user_data[user_id]["stage"] = 4
-        await update.message.reply_text("5️⃣ Бюджет ($):")
+        await update.message.reply_text("5️⃣ Бюджет (₽):")
 
     elif stage == 4:
         user_data[user_id]["budget"] = text
         user_data[user_id]["stage"] = 5
-        await update.message.reply_text("6️⃣ Способ оплаты (карта, крипта, перевод):")
+        await update.message.reply_text("6️⃣ Способ оплаты (название банка):")
 
     elif stage == 5:
         user_data[user_id]["payment"] = text
